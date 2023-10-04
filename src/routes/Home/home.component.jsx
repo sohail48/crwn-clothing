@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Directory from '../../component/directory/directory.component';
 
 const Home = () => {
-  const Categories = [
+  const categories = [
     {
       id: 1, 
       title: 'Hats',
@@ -15,7 +15,7 @@ const Home = () => {
     },
     {
       id: 3, 
-      title: 'Sneaker',
+      title: 'Sneakers',
       imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png'
     },
     {
@@ -29,11 +29,10 @@ const Home = () => {
       imageUrl: 'https://i.ibb.co/R70vBrQ/men.png'
     },
   ];
-  
   return(
     <div>
-      <Directory Categories={Categories}/>
-      <Outlet/>
+       <Outlet/>
+      <Directory categories={categories}/>
     </div>
   );
 };

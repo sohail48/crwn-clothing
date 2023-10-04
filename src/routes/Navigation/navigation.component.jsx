@@ -1,6 +1,6 @@
 import { Link, Outlet } from 'react-router-dom';
 import { Fragment } from 'react';
-import '../Navigation/navigation.styles.scss';
+import '../navigation/navigation.styles.scss';
 
 const Navigation = () => {
     return(
