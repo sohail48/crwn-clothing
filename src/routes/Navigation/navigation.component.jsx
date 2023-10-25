@@ -1,9 +1,11 @@
 import { Link, Outlet } from 'react-router-dom';
+
 import { Fragment, useContext } from 'react';
 import '../navigation/navigation.styles.scss';
 import {UserContext} from '../../contexts/user.context';
 
 import {signOutUser} from '../../utils/firebase/firebase.utils';
+import CartIcon from '../../component/cart-icon/cart-icon.component';
 
 const Navigation = () => {
     const {currentUser} = useContext(UserContext);
@@ -20,8 +22,7 @@ const Navigation = () => {
                     </Link>
                     {currentUser ? (
                         <span className='nav-link' onClick={signOutUser}>
-                            {' '}
-                            SIGN OUT{' '}
+                            SIGN OUT
                         </span>
                     ) : (
                         <Link className='nav-link' to='/auth'>
@@ -29,6 +30,7 @@ const Navigation = () => {
                         </Link>
                         )
                     }
+                    <CartIcon/>
                 </div>
             </div>
             <Outlet/>
