@@ -70,10 +70,3 @@ export const onAuthStateChangedListener = (callback) =>
     onAuthStateChanged(auth, callback);
 
 
-/**
- * {
- * next: callback,
- * error: errorcallback,
- *  complete: completedcallback
- * }
- */
