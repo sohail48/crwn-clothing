@@ -17,7 +17,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const CartIcon = () => {
-    const {isCartOpen, setIsCartOpen} = useContext(CartContext);
+    const {isCartOpen, setIsCartOpen, cartCount} = useContext(CartContext);
 
     const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen)
 
@@ -25,6 +25,7 @@ const CartIcon = () => {
         <div className='cart-icon-container' onClick={toggleIsCartOpen}>
             <IconButton aria-label="cart" className='shopping-icon'>
                 <StyledBadge badgeContent={0} color="secondary" className='item-count'>
+                    {cartCount}
                     <ShoppingCartIcon/>
                 </StyledBadge>
             </IconButton>
