@@ -4,11 +4,11 @@ import {CartContext} from '../../contexts/cart.context';
 import '../../component/product-card/product-card.styles.scss';
 import Button from '../button/button.component';
 
-const ProductCard = ({product}) => {
-    const {name, imageUrl, price} = product;
+const ProductCard = ({products}) => {
+    const {name, imageUrl, price} = products;
     const {addItemToCart} = useContext(CartContext);
 
-    const addProductToCart = () => addItemToCart(product)
+    const addProductToCart = () => addItemToCart(products)
     return(
         <div className='product-card-container'>
             <img src={imageUrl} alt={`${name}`}/>
