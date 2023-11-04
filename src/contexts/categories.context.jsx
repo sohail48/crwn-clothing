@@ -20,6 +20,6 @@ export const CategoriesProvider = ({children}) => {
     const value = {CategoriesMap};
 
     return(
-        < CategoriesContext.Provider value={value}>{children}</ CategoriesContext.Provider>
+        <CategoriesContext.Provider value={value}>{children}</CategoriesContext.Provider>
     );
 };
