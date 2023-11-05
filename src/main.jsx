@@ -7,7 +7,7 @@ import {CartProvider} from './contexts/cart.context';
 import App from './App';
 import '../src/index.scss';
 
-const rootElement = document.getElementById('root')
+const rootElement = document.getElementById('root');
 
 render(
   <React.StrictMode>
